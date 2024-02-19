@@ -1,0 +1,24 @@
+stages:
+    - deploy
+
+prod-deploy-job:
+    image: max107/alpine-fabric3
+    stage: deploy
+    script:
+        - fab prodconfig deploy
+    environment:
+        name: production
+        url: https://equipment-monitoring.crm.vdkanal.ru
+    only:
+        - master
+
+dev-deploy-job:
+    image: max107/alpine-fabric3
+    stage: deploy
+    script:
+        - fab devconfig deploy
+    environment:
+        name: development
+        url: https://dev-equipment-monitoring.crm.vdkanal.ru
+    only:
+        - dev

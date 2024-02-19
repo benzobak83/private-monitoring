@@ -1,0 +1,68 @@
+export const ROUTES = {
+    index: '/',
+    login: '/login',
+    settings: {
+        general: '/settings',
+        accessRights: '/settings/access-rights',
+        subdivision: '/settings/subdivision',
+        staff: '/settings/staff',
+        typesOfEquipment: '/settings/types-of-equipment',
+        typesOfEquipmentCreate: '/settings/types-of-equipment/create',
+        typesOfEquipmentEdit: '/settings/types-of-equipment/edit/:id',
+        typesOfEquipmentEditGet: (typeId: number) =>
+            `/settings/types-of-equipment/edit/${typeId}`,
+        inspectionChecklist: '/settings/checklist-inspection',
+        inspectionChecklistItem: '/settings/checklist-inspection/:id',
+        inspectionChecklistItemGet: (checklistId: number) =>
+            `/settings/checklist-inspection/${checklistId}`,
+        worksChecklist: '/settings/checklist-work',
+        worksChecklistItem: '/settings/checklist-work/:id',
+        worksChecklistItemGet: (id: number) => `/settings/checklist-work/${id}`,
+        officials: '/settings/officials',
+        updateDataIn1C: '/settings/update-data-in-1C',
+    },
+    object: {
+        general: '/object',
+        card: '/object/:id',
+        cardGet: (id: number) => `/object/${id}`,
+        state: '/object/:id/state',
+        stateGet: (id: number) => `/object/${id}/state`,
+        schema: '/object/:id/schema',
+        schemaGet: (id: number) => `/object/${id}/schema`,
+        shifts: '/object/:id/shifts',
+        shiftGet: (id: number) => `/object/${id}/shifts`,
+        defects: '/object/:id/defects',
+        defectsGet: (id: number) => `/object/${id}/defects`,
+        tasksForToday: '/object/:id/tasks',
+        tasksForTodayGet: (id: number) => `/object/${id}/tasks`,
+    },
+    defect: {
+        general: '/defect',
+        card: '/defect/:id',
+        cardGet: (id: number) => `/defect/${id}`,
+        materialsList: '/materials-list',
+    },
+    equipment: {
+        general: '/equipment',
+        card: '/equipment/:id',
+        cardGet: (id: number) => `/equipment/${id}`,
+    },
+    work: {
+        general: '/work',
+        start: '/work/start',
+    },
+    regulatoryWork: {
+        general: '/regulatory-work',
+    },
+    journal: {
+        general: '/journal',
+        regulatoryWork: '/journal/regulatory-work',
+        inspectionCheck: '/journal/inspection-check',
+        operatingTime: '/journal/operating-time',
+    },
+    report: {
+        general: '/report',
+        motoHours: '/report/moto-hours',
+        repair: '/report/repair',
+    },
+}

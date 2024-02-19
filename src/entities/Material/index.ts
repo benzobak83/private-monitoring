@@ -1,0 +1,5 @@
+export { GoToMaterials } from './ui/GoToMaterials'
+export * from './model/getMaterialsActs'
+export * from './model/getMaterialList'
+export * from './model/types'
+export * from './model/getMaterialsActOfObjectByCompletingId'

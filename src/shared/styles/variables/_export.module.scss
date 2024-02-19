@@ -1,0 +1,7 @@
+@import 'variables';
+
+:export {
+    @each $key, $value in $var {
+        #{unquote($key)}: $value;
+    }
+}

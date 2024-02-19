@@ -1,0 +1,1 @@
+export { PermissionsWidget } from './PermissionsWidget'

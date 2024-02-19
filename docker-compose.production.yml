@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  b24.monitoring-service.frontend:
+    container_name: b24.monitoring-service.frontend
+    build: docker/production
+    ports:
+      - "4120:3000"
+    volumes:
+      - ./:/app
+    restart: unless-stopped
+
